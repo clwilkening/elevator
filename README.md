@@ -2,8 +2,11 @@
 
 ## Things I'd Improve
 
-- make sure commits cannot be made directly to main
-- refactor the setFloorQueue to reduce repetitiveness
+- Make sure commits cannot be made directly to main.
+- Refactor the setFloorQueue to reduce repetitiveness.
+- Use an interface for props so the can be type checked.
+- Stop prop drilling, use recoil or redux for state management.
+  - This would be better if we were rendering multiple buildings and multiple elevators per building.
 
 ## Challenges
 

@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
+import _ from '../helpers/lodash-helpers'
 import Keypad from './Keypad';
+import Shaft from './Shaft';
 
 const NUM_FLOORS : number = 10;
 
@@ -8,6 +10,7 @@ const Elevator = () => {
   // const [floorQueue, setFloorQueue] = useState([]);
   const [currentFloor, setCurrentFloor] = useState<number>(1);
 
+  // Adds a floor to the queue
   const onFloorClick = (floor : number) => {
     console.log('---------------')
     console.log('\nclicked', floor)
@@ -91,16 +94,23 @@ const Elevator = () => {
   }
 
   console.log(floorQueue)
+  // This could be defined as a constant, but doing it this way as if
+  // NUM_FLOORS could vary from an API
+  const floors : Array<number> = _.range(1, NUM_FLOORS + 1)
   return (
-    <div className="d-flex flex-column min-w-[300px]">
-      <div className="bg-slate-300">Shaft</div>
+    <main className="d-flex flex-column min-w-[300px]">
+      <Shaft 
+        floors={floors}
+        currentFloor={currentFloor}
+        floorQueue={floorQueue}
+      />
       <Keypad
-        numFloors={NUM_FLOORS}
+        floors={floors}
         onFloorClick={onFloorClick}
         floorQueue={floorQueue}
         currentFloor={currentFloor}
       />
-    </div>
+    </main>
   );
 };
 

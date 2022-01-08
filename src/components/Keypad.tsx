@@ -5,7 +5,7 @@ import Display from './Display';
 const Keypad = (props) => {
   
   const renderButtons = () => {
-    const floors : Array<number> = _.range(1, props.numFloors + 1);
+    const { floors }: {floors: Array<number> } = props;
 
     const getButtonClass = (floor : number) : string => {
       const defaults : string = 'h-[44px] w-[44px] rounded-full flex items-center justify-center justify-self-center';
@@ -13,7 +13,7 @@ const Keypad = (props) => {
       if (props.floorQueue.includes(floor)) {
         return `${defaults} bg-stone-100 text-black`;
       }
-      return `${defaults} bg-slate-400 text-black`;
+      return `${defaults} bg-stone-400 text-black`;
     }
 
     return floors.map(fl => {
@@ -32,10 +32,10 @@ const Keypad = (props) => {
   return (
     <>
       {props.floorQueue}
-    <Display currentFloor={props.currentFloor} />
-    <section className="grid gap-4 grid-cols-3 pb-4 pt-4 bg-slate-600">
-      {renderButtons()}
-    </section>
+      <Display currentFloor={props.currentFloor} />
+      <section className="grid gap-4 grid-cols-3 pb-4 pt-4 bg-zinc-600">
+        {renderButtons()}
+      </section>
     </>
   )
 }
