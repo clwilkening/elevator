@@ -1,0 +1,16 @@
+{
+    // install this extension
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnSave": false,
+    "editor.formatOnPaste": false,
+    "editor.linkedEditing": true,
+    "editor.quickSuggestionsDelay": 300,
+  
+    // Custom
+    "workbench.colorCustomizations": {
+      /* error squiggles */
+      "editorError.foreground": "#d0ff00",
+      "editorError.border": "#d0ff00",
+    }
+  }
+  

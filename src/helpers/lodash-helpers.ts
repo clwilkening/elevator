@@ -1,3 +1,4 @@
+// Use tree-shaking because lodash is huge.
 import cloneDeep from 'lodash/cloneDeep';
 import difference from 'lodash/difference';
 import find from 'lodash/find';
