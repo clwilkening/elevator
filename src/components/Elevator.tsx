@@ -4,14 +4,14 @@ import Keypad from './Keypad';
 import Shaft from './Shaft';
 
 const NUM_FLOORS: number = 10;
-const PAUSE_ON_FLOOR_DELAY: number = 3000;
+// const PAUSE_ON_FLOOR_DELAY: number = 3000;
 const BETWEEN_FLOOR_DELAY: number = 1000;
 
 const Elevator = () => {
   const [floorQueue, setFloorQueue] = useState<number[]>([]);
   const [currentFloor, setCurrentFloor] = useState<number>(1);
   const [isMoving, setIsMoving] = useState<boolean>(false);
-  const [isPaused, setIsPaused] = useState<boolean>(false);
+  // const [isPaused, setIsPaused] = useState<boolean>(false);
 
   const getDirection = useCallback(() => (currentFloor < floorQueue[0] ? 'up' : 'down'), [currentFloor, floorQueue]);
 
