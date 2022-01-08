@@ -11,6 +11,8 @@ https://vigilant-hopper-ad4962.netlify.app/
 - Stop prop drilling, use recoil or redux for state management.
   - This would be better if we were rendering multiple buildings and multiple elevators per building.
 - Move constants into a separate file.
+- Fix the known bugs
+- Make it look much nicer. A building would be cool, as well as animations for the elevator doors.
 
 
 ## Known Bugs
