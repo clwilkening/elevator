@@ -2,6 +2,9 @@
 
 ## Things I'd Improve
 
+- make sure commits cannot be made directly to main
+- refactor the setFloorQueue to reduce repetitiveness
+
 ## Challenges
 
 ---
