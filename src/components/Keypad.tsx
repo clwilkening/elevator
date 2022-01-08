@@ -1,5 +1,4 @@
 import React from 'react';
-import _ from '../helpers/lodash-helpers';
 import Display from './Display';
 
 const Keypad = props => {
